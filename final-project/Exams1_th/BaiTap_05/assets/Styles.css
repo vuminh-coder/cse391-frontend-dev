@@ -1,0 +1,189 @@
+.d-flex {
+  display: flex;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+.list-style-type-none {
+  list-style-type: none;
+}
+main,
+table {
+  width: 100%;
+}
+
+.gap-x-3 {
+  column-gap: 12px;
+}
+
+table {
+  height: 250px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgb(203, 203, 203);
+  padding: 10px;
+  border-collapse: collapse;
+}
+
+.padding-left-0 {
+  padding-left: 0;
+}
+.margin-left-0 {
+  margin-left: 0;
+}
+header {
+  background-color: rgb(37, 37, 37);
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.item {
+  color: rgb(235, 235, 235);
+}
+
+header form > input,
+header form > button {
+  height: 40px;
+  border-radius: 8px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+.h-fit-content {
+  height: fit-content;
+}
+th {
+  text-align: left;
+  padding: 12px 18px;
+  vertical-align: middle;
+  border-bottom: 1px solid rgb(225, 224, 224);
+}
+
+.SearchGG button {
+  height: 50px;
+}
+.Employee {
+  height: 80px;
+}
+.Employee-btn {
+  height: 35px;
+  border-radius: 10px;
+  background-color: rgb(77, 77, 236);
+  color: white;
+  width: 80px;
+  margin-right: 10px;
+  border: none;
+  box-shadow: 0 2px 2px rgb(176, 176, 176);
+}
+.Employee-text {
+  margin-left: 10px;
+}
+
+.EditDelete-btn {
+  width: 75px;
+  height: 25px;
+  color: white;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 2px 2px rgb(176, 176, 176);
+}
+.bg-red {
+  background-color: red;
+}
+.bg-orange {
+  background-color: orange;
+}
+.Action {
+  width: 200px;
+}
+.Email {
+  width: 300px;
+}
+
+.newEmployee {
+  width: 70%;
+  position: absolute;
+  top: 20vh;
+  left: 15vw;
+}
+
+.newEmployee > div:first-child {
+  background-color: blue;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.newEmployee div:first-child button {
+  height: 30px;
+  margin-top: 22px;
+  background-color: blue;
+  border: none;
+}
+
+.flex-fill {
+  width: 50%;
+  margin-top: 10px;
+}
+.padding-lr-5 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.mb-3 > input,
+.mb-3 > select {
+  height: 30px;
+  width: 90%;
+  border-radius: 10px;
+}
+.Sc-btn {
+  width: 70px;
+  height: 30px;
+  border: none;
+  color: white;
+  border-radius: 7px;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+.Sc {
+  padding-right: 70px;
+  padding-bottom: 50px;
+}
+.bg-green {
+  background-color: green;
+}
+.bg-darkgray {
+  background-color: darkgray;
+}
+.newEmployee {
+  width: 70%;
+  position: absolute;
+  top: 20vh;
+  left: 15vw;
+  background-color: white; /* Thêm nền trắng để không bị nhìn xuyên thấu */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ cho đẹp */
+  z-index: 1000; /* Đảm bảo Form luôn nằm trên cùng */
+  display: none; /* MẶC ĐỊNH LÀ ẨN */
+}
+
+/* Thêm một class phụ để hiện Form */
+.show-form {
+  display: block !important;
+}
+
+.newEmployee {
+  border-radius: 10px;
+}

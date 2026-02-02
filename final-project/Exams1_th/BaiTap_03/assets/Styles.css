@@ -1,0 +1,17 @@
+th {
+  border: 1px solid black;
+}
+table {
+  border-spacing: 0;
+  border: 1px solid black;
+}
+.d-flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+table {
+  width: 100vw;
+  height: 75vh;
+}

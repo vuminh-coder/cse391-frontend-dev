@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/Styles.css" />
+  </head>
+  <body>
+    <form action="">
+      <div class="BasicInfo">
+        <h1>Basic Info</h1>
+        <hr />
+        <div class="d-flex">
+          <div class="label">
+            <b>Employee ID</b>
+          </div>
+          <div class="value">
+            <b>9</b>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">Last Name</div>
+          <div class="value">Dodsworth</div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <label for="FirstName">First Name</label>
+          </div>
+          <div class="value">
+            <input type="text" placeholder="Anne" />
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label d-flex align-items-center">
+            <b>Gender</b>
+          </div>
+          <div class="value">
+            <div>
+              <input type="radio" id="male" /><label for="male">Male</label>
+            </div>
+            <div>
+              <input type="radio" id="female" /><label for="female"
+                >Female</label
+              >
+            </div>
+            <div>
+              <input type="radio" id="xxx" /><label for="xxx">XXX</label>
+            </div>
+            <div>
+              <input type="radio" id="yyy" checked /><label for="yyy"
+                >YYY</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <label for="Title">Title</label>
+          </div>
+          <div class="value">
+            <input type="text" id="Title" placeholder="Sales Representative" />
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <label for="Suffix">Suffix</label>
+          </div>
+          <div class="value">
+            <input type="text" id="Suffix" placeholder="" />
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <label for="BirthDate">Birth Date</label>
+          </div>
+          <div class="value">
+            <input type="text" id="BirthDate" />
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <label for="HireDate">Hire Date</label>
+          </div>
+          <div class="value">
+            <input type="text" id="HireDate" />
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <label for="ssn">SSN # (if applicable)</label>
+          </div>
+          <div class="value">
+            <input type="text" id="ssn" />
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <label for="ReportsTo">Reports to</label>
+          </div>
+          <div class="value">
+            <select id="ReportsTo" name="">
+              <option value="1">Buchanan</option>
+              <option value="2">Buchanan</option>
+              <option value="3">Buchanan</option>
+              <option value="4">Buchanan</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="ContactInfo">
+        <h1>Contact Info</h1>
+        <hr />
+        <div class="d-flex">
+          <div class="label">
+            <label for="email">Email</label>
+          </div>
+          <div class="value">
+            <input type="email" placeholder="name@email.com" id="email" />
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="label">
+            <label for="Address">Address</label>
+          </div>
+          <div class="value">
+            <input type="text" placeholder="" id="Address" />
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="label">
+            <label for="City">City</label>
+          </div>
+          <div class="value">
+            <input type="text" id="City" />
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="label">
+            <label for="Region">Region</label>
+          </div>
+          <div class="value">
+            <input type="text" id="Region" />
+          </div>
+        </div>
+        <div class="d-flex">
+          <div class="label">
+            <label for="PostalCode">Postal Code</label>
+          </div>
+          <div class="value">
+            <input type="text" id="PostalCode" />
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <label for="country">country</label>
+          </div>
+          <div class="value">
+            <section>
+              <option value="1">Russian Federation</option>
+            </section>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <label for="Ushome">US Home Phone</label>
+          </div>
+          <div class="value">
+            <input type="number" id="Ushome" />
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <label for="Photo">Photo</label>
+          </div>
+          <div class="value">
+            <input type="file" id="Photo" />
+          </div>
+        </div>
+      </div>
+
+      <div class="OptionalInfo">
+        <h1>Optional Info</h1>
+        <hr />
+        <div class="d-flex">
+          <div class="label d-flex align-items-center">
+            <label for="Notes">Notes</label>
+          </div>
+          <div class="value">
+            <textarea name="" id="Notes"></textarea>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <b>Preferred Shift</b>
+          </div>
+          <div class="value">
+            <div>
+              <input type="checkbox" id="Regular" /><label for="Regular"
+                >Regular</label
+              >
+            </div>
+            <div>
+              <input type="checkbox" id="GravyYard" /><label for="GravyYard"
+                >Gravy Yard</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <b>Active?</b>
+          </div>
+          <div class="value">
+            <input type="checkbox" />
+          </div>
+        </div>
+
+        <div class="d-flex">
+          <div class="label">
+            <b>Are you human?</b>
+          </div>
+          <div class="value">
+            <label for="Click">Click to change</label>
+            <input type="text" id="Click" />
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

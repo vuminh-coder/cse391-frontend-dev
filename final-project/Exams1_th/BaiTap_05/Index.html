@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/Styles.css" />
+  </head>
+  <body>
+    <header class="d-flex justify-content-between align-items-center">
+      <div class="d-flex gap-x-3">
+        <h1>HM Management</h1>
+        <nav class="d-flex align-items-center">
+          <ul class="gap-x-3 d-flex list-style-type-none">
+            <li
+              class="li-items d-flex align-items-center juutify-content-center"
+            >
+              <a href="" class="item text-decoration-none">Home</a>
+            </li>
+            <li
+              class="li-items d-flex align-items-center juutify-content-center"
+            >
+              <a href="" class="item text-decoration-none">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <form
+        action="https://www.google.com/search"
+        class="SearchGG gap-x-3 d-flex align-items-center"
+        method="get"
+      >
+        <input type="text" name="q" placeholder="Search ...." />
+        <button type="submit">Search</button>
+      </form>
+    </header>
+
+    <main class="flex-direction-column d-flex">
+      <div
+        class="Employee container d-flex justify-content-between align-items-center juutify-content-center"
+      >
+        <h3 class="Employee-text">Employee</h3>
+        <button class="Employee-btn" id="btnAdd">+ add</button>
+      </div>
+
+      <div>
+        <table>
+          <thead class="">
+            <tr>
+              <th><b>ID</b></th>
+              <th><b>Name</b></th>
+              <th class="Email"><b>Email</b></th>
+              <th><b>Phone</b></th>
+              <th><b>Position</b></th>
+              <th class="Action"><b>Action</b></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th>1</th>
+              <th>Fatima Beatriz</th>
+              <th>Fatima Beatriz@gmail.com</th>
+              <th>0985674321</th>
+              <th>Staff</th>
+              <th class="gap-x-3 d-flex EditDelete">
+                <button class="EditDelete-btn bg-orange">Edit</button>
+                <button class="EditDelete-btn bg-red">Delete</button>
+              </th>
+            </tr>
+            <tr>
+              <th>2</th>
+              <th>Jannat Ferdous</th>
+              <th>Jannat Ferdous@gmail.com</th>
+              <th>0987654322</th>
+              <th>Manager</th>
+              <th class="gap-x-3 d-flex EditDelete">
+                <button class="EditDelete-btn bg-orange">Edit</button>
+                <button class="EditDelete-btn bg-red">Delete</button>
+              </th>
+            </tr>
+            <tr>
+              <th>3</th>
+              <th>Shaihk Sanjid</th>
+              <th>Shaihk Sanjid@gmail.com</th>
+              <th>0987654323</th>
+              <th>Staff</th>
+              <th class="gap-x-3 d-flex EditDelete">
+                <button class="EditDelete-btn bg-orange">Edit</button>
+                <button class="EditDelete-btn bg-red">Delete</button>
+              </th>
+            </tr>
+            <tr>
+              <th>4</th>
+              <th>Limon Sheikh</th>
+              <th>Limon Sheikh@gmail.com</th>
+              <th>0987654324</th>
+              <th>Manager</th>
+              <th class="gap-x-3 d-flex EditDelete">
+                <button class="EditDelete-btn bg-orange">Edit</button>
+                <button class="EditDelete-btn bg-red">Delete</button>
+              </th>
+            </tr>
+            <tr>
+              <th>5</th>
+              <th>Sumaiya Akter</th>
+              <th>Sumaiya Akter@gmail.com</th>
+              <th>0987654325</th>
+              <th>Staff</th>
+              <th class="gap-x-3 d-flex EditDelete">
+                <button class="EditDelete-btn bg-orange">Edit</button>
+                <button class="EditDelete-btn bg-red">Delete</button>
+              </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+    <div class="newEmployee" id="formEmployee">
+      <div class="d-flex justify-content-between">
+        <h1>New Employee</h1>
+        <button class="" id="btnClose" style="cursor: pointer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="d-flex gap-x-3 justify-content-between padding-lr-5">
+        <div class="flex-fill">
+          <div class="mb-3 d-flex flex-direction-column">
+            <label for="name" class="d-block">Name</label>
+            <input type="text" id="name" class="form-control" />
+          </div>
+          <div class="mb-3 d-flex flex-direction-column">
+            <label for="Phone" class="d-block">Phone</label>
+            <input type="text" id="Phone" class="form-control" />
+          </div>
+          <div class="mb-3 d-flex flex-direction-column">
+            <p class="mb-1">Sex</p>
+            <div class="d-flex gap-3">
+              <div class="">
+                <input type="radio" name="gender" id="male" />
+                <label for="male">Male</label>
+              </div>
+              <div>
+                <input type="radio" name="gender" id="female" />
+                <label for="female">Female</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-fill">
+          <div class="mb-3 d-flex flex-direction-column">
+            <label for="email" class="d-block">Email</label>
+            <input type="email" id="email" class="form-control" />
+          </div>
+          <div class="mb-3 d-flex flex-direction-column">
+            <label for="position" class="d-block">Position</label>
+            <select id="position" class="form-select">
+              <option value="">--- Select Position ---</option>
+              <option value="Staff">Staff</option>
+              <option value="Manager">Manager</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="Sc d-flex justify-content-end gap-x-3">
+        <button class="Sc-btn bg-green">Save</button>
+        <button class="Sc-btn bg-darkgray">Cancel</button>
+      </div>
+    </div>
+  </body>
+  <script src="./assets/Javascript.js"></script>
+</html>
