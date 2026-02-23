@@ -1,0 +1,55 @@
+/* TODO:
+       - display: flex
+       - justify-content: center
+       - align-items: center
+       - gap: 20px
+       - background: #f8f9fa
+       - padding: 15px
+    */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #f8f9fa;
+  padding: 15px;
+}
+
+/* Cải tiến .posts bằng Flexbox */
+/* TODO:
+       - display: flex
+       - flex-wrap: wrap
+       - gap: 20px
+       - justify-content: center (hoặc space-between)
+       - max-width: 1200px
+       - margin: 40px auto
+    */
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* TODO:
+       - flex: 0 0 calc(33.33% - 20px)
+       - (hoặc flex: 1 1 300px cho responsive tự động)
+    */
+.card {
+  flex: 0 0 calc(100% / 3 - 20px);
+}
+
+/* Responsive: Khi màn hình < 768px, card chiếm full width */
+@media (max-width: 768px) {
+  .posts {
+    /* TODO: flex-direction: column */
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    /* TODO: flex: 1 1 100% */
+  }
+}
