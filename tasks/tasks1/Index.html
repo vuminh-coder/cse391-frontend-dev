@@ -3,54 +3,88 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>TechStore - Công Nghệ Chính Hãng</title>
+    <meta
+      name="description"
+      content="TechStore chuyên cung cấp điện thoại, laptop, phụ kiện công nghệ chính hãng với giá tốt nhất."
+    />
+    <meta
+      name="keywords"
+      content="iphone, laptop, macbook, phụ kiện, techstore"
+    />
+    <meta property="og:title" content="TechStore - Công Nghệ Tương Lai" />
+    <meta
+      property="og:image"
+      content="./assets/img/Gemini_Generated_Image_sdsi86sdsi86sdsi-removebg-preview__1_-removebg-preview.png"
+    />
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
   <body class="d-flex flex-direction-column justify-content-between">
     <div
-      class="d-flex justify-content-between align-items-center container mg-top-30 Logo-nav"
+      class="d-flex justify-content-between align-items-center container mg-top-30 Logo-nav header-nav"
     >
       <div class="logo-web">
         <img
           src="./assets/img/Gemini_Generated_Image_sdsi86sdsi86sdsi-removebg-preview__1_-removebg-preview.png"
           alt=""
+          alt="TechStore Logo"
           width="100px"
         />
       </div>
-      <nav class="list-style-type-none d-flex gap-x-4 menu">
-        <li class="menu-a">
-          <a
-            href=""
-            class="item text-decoration-none ft-size-20 text-color-black"
-            >Trang Chủ</a
-          >
-        </li>
-        <li class="menu-a">
-          <a
-            href=""
-            class="item text-decoration-none ft-size-20 text-color-black"
-            >Cửa Hàng</a
-          >
-        </li>
-        <li class="menu-a">
-          <a
-            href=""
-            class="item text-decoration-none ft-size-20 text-color-black"
-            >Giới Thiệu</a
-          >
-        </li>
-        <li class="menu-a">
-          <a
-            href=""
-            class="item text-decoration-none ft-size-20 text-color-black"
-            >Liên Hệ</a
-          >
-        </li>
+      <nav>
+        <ul class="list-style-type-none d-flex gap-x-4 menu">
+          <li class="menu-a">
+            <a
+              href="#"
+              class="item text-decoration-none ft-size-20 text-color-black"
+              >Trang Chủ</a
+            >
+          </li>
+          <li class="menu-a">
+            <a
+              href="#section-iphone"
+              class="item text-decoration-none ft-size-20 text-color-black"
+              >Cửa Hàng</a
+            >
+          </li>
+          <li class="menu-a">
+            <a
+              href="#about"
+              class="item text-decoration-none ft-size-20 text-color-black"
+              >Giới Thiệu</a
+            >
+          </li>
+          <li class="menu-a">
+            <a
+              href="#lienhe"
+              class="item text-decoration-none ft-size-20 text-color-black"
+              >Liên Hệ</a
+            >
+          </li>
+        </ul>
       </nav>
 
       <div class="gap-x-4 d-flex">
-        <button class="btn bg-green">Login</button>
-        <button class="btn bg-darkgray background">Background</button>
+        <a
+          href="admin.html"
+          class="btn bg-darkgray text-decoration-none text-color-white d-flex align-items-center"
+          style="font-size: 14px"
+          >🔧 Admin</a
+        >
+        <button id="loginBtn" class="btn bg-green" onclick="openLogin()">
+          Login
+        </button>
+        <button class="btn bg-darkgray" onclick="toggleDarkMode()">
+          Dark Mode 🌙
+        </button>
+        <div class="cart-icon-wrapper">
+          <button
+            class="btn bg-gradient-orange cart-btn"
+            onclick="toggleCart()"
+          >
+            🛒 <span class="cart-count">0</span>
+          </button>
+        </div>
       </div>
     </div>
 
@@ -67,194 +101,435 @@
               class="list-style-type-none gap-y-4 d-flex flex-direction-column mg-left-0 justify-conteny-center"
             >
               <li class="mg-left-0 d-flex">
-                <a href="#" class="text-decoration-none text-color-black"
+                <a
+                  href="#section-iphone"
+                  class="text-decoration-none text-color-black"
                   >📱 Điện thoại & Tablet</a
                 >
               </li>
               <li>
-                <a href="#" class="text-decoration-none text-color-black"
+                <a
+                  href="#section-laptop"
+                  class="text-decoration-none text-color-black"
                   >💻 Laptop & Linh kiện</a
                 >
               </li>
               <li>
-                <a href="#" class="text-decoration-none text-color-black"
+                <a
+                  href="#section-audio"
+                  class="text-decoration-none text-color-black"
                   >🎧 Phụ kiện âm thanh</a
                 >
               </li>
               <li>
-                <a href="#" class="text-decoration-none text-color-black"
+                <a
+                  href="#section-accessories"
+                  class="text-decoration-none text-color-black"
                   >⌚ Đồng hồ thông minh</a
                 >
               </li>
             </ul>
           </nav>
         </aside>
-        <div class="content-ct d-flex mg-left-20">
-          <div class="col-3 content">
-            <img src="./assets/img/13_1632878128.jpg" alt="" />
-            <div class="product-card">
-              <div class="product-badge">Giảm 15%</div>
-              <h3 class="product-name">Apple iPhone 13 128GB</h3>
-              <div class="product-price">
-                <span class="current-price">13.590.000đ</span>
-                <span class="voucher-tag">Giảm thêm 200kđ</span>
-              </div>
-              <div class="product-info">
-                <ul>
-                  <li>Thiết kế: Camera chéo, viền nhôm vuông vức.</li>
-                  <li>Hiệu năng: Chip A15 Bionic vẫn rất mượt.</li>
-                  <li>Khu vực: Toàn quốc (Sẵn hàng).</li>
-                </ul>
-              </div>
+        <aside class="right-aside">
+          <!-- THANH TÌM KIẾM & BỘ LỌC -->
+          <div
+            class="toolbar d-flex justify-content-between align-items-center mg-left-20 mg-bottom-20 wrap-mobile mg-right-20 gap-x-2"
+          >
+            <div class="search-box">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Tìm kiếm sản phẩm..."
+                class="form-control"
+              />
+            </div>
+            <div class="filter-box mg-left-20">
+              <select id="categoryFilter" class="form-control">
+                <option value="all">📂 Tất cả danh mục</option>
+                <option value="iphone">📱 Điện thoại</option>
+                <option value="laptop">💻 Laptop</option>
+                <option value="audio">🎧 Âm thanh</option>
+                <option value="accessory">⌨️ Phụ kiện</option>
+              </select>
+            </div>
+            <div class="filter-box">
+              <select id="priceFilter" class="form-control">
+                <option value="all">💰 Tất cả mức giá</option>
+                <option value="low">Dưới 10 triệu</option>
+                <option value="mid">10 - 20 triệu</option>
+                <option value="high">Trên 20 triệu</option>
+              </select>
             </div>
           </div>
-          <div class="col-3 content">
-            <img
-              src="./assets/img/iphone-15-pro-max-blue-thumbnew-600x600_1753640743.jpg"
-              alt=""
-            />
-            <div class="product-card">
-              <div class="product-badge">Giảm 23%</div>
-              <h3 class="product-name">Apple iPhone 15 128GB</h3>
-              <div class="product-price">
-                <span class="current-price">17.690.000đ</span>
-                <span class="voucher-tag">Giảm thêm 500kđ</span>
+
+          <section id="section-iphone">
+            <header>
+              <h2 class="d-flex justify-content-center mg-left-20 mg-right-20">
+                📱 Điện thoại & Tablet
+              </h2>
+            </header>
+            <div class="content-ct d-flex mg-left-20 flex-wrap">
+              <!-- Products will be rendered here by JS -->
+            </div>
+          </section>
+
+          <section id="section-laptop">
+            <header>
+              <h2 class="d-flex justify-content-center mg-left-20 mg-right-20">
+                💻 Laptop & Linh kiện
+              </h2>
+            </header>
+            <div class="content-ct d-flex mg-left-20 flex-wrap">
+              <!-- Products will be rendered here by JS -->
+            </div>
+          </section>
+
+          <section id="section-audio">
+            <header>
+              <h2 class="d-flex justify-content-center mg-left-20 mg-right-20">
+                🎧 Phụ kiện âm thanh
+              </h2>
+            </header>
+            <div class="content-ct d-flex mg-left-20 flex-wrap">
+              <!-- Products will be rendered here by JS -->
+            </div>
+          </section>
+
+          <section id="section-accessories">
+            <header>
+              <h2 class="d-flex justify-content-center mg-left-20 mg-right-20">
+                ⌨️ Linh kiện & Phụ kiện
+              </h2>
+            </header>
+
+            <div class="content-ct d-flex mg-left-20 flex-wrap">
+              <!-- Products will be rendered here by JS -->
+            </div>
+          </section>
+
+          <!-- GIỚI THIỆU (ABOUT SECTION) -->
+          <section id="about" class="about-section mg-left-20">
+            <header>
+              <h2 class="d-flex justify-content-center">🌟 Về Chúng Tôi</h2>
+            </header>
+            <div class="about-container d-flex gap-x-4 wrap-mobile">
+              <div class="about-card">
+                <div class="icon">🚀</div>
+                <h3>Sứ Mệnh</h3>
+                <p>
+                  Mang đến những sản phẩm công nghệ tiên tiến nhất giúp nâng cao
+                  chất lượng cuộc sống của người Việt.
+                </p>
               </div>
-              <div class="product-info">
-                <ul>
-                  <li>Thiết kế: Dynamic Island, mặt lưng kính pha màu.</li>
-                  <li>Hiệu năng: Chip A16 Bionic cực mạnh.</li>
-                  <li>Khu vực: Bắc Ninh (Sẵn hàng).</li>
-                </ul>
+              <div class="about-card">
+                <div class="icon">💎</div>
+                <h3>Chất Lượng</h3>
+                <p>
+                  Cam kết 100% sản phẩm chính hãng, bảo hành uy tín và nguồn gốc
+                  xuất xứ rõ ràng.
+                </p>
+              </div>
+              <div class="about-card">
+                <div class="icon">🤝</div>
+                <h3>Tận Tâm</h3>
+                <p>
+                  Đội ngũ hỗ trợ khách hàng 24/7, luôn lắng nghe và giải quyết
+                  mọi thắc mắc của bạn.
+                </p>
               </div>
             </div>
+          </section>
+        </aside>
+      </main>
+      <footer class="footer mg-top-30 text-color-white p-4">
+        <div class="container d-flex justify-content-between">
+          <div class="footer-info">
+            <h3>Về Chúng Tôi</h3>
+            <p>Chuyên cung cấp các sản phẩm công nghệ chính hãng.</p>
+            <p>Địa chỉ: 123 Đường ABC, Hà Nội</p>
           </div>
-          <div class="col-3 content">
-            <img
-              src="./assets/img/iphone-16-pro---titan-tự-nhiên_1726075065.png"
-              alt=""
-            />
-            <div class="product-card">
-              <div class="product-badge">Giảm 10%</div>
-              <h3 class="product-name">iPhone 15 Pro Max 256GB</h3>
-              <div class="product-price">
-                <span class="current-price">29.490.000đ</span>
-                <span class="voucher-tag">Thu cũ đổi mới</span>
-              </div>
-              <div class="product-info">
-                <ul>
-                  <li>Thiết kế: Khung Titanium, nút Action mới.</li>
-                  <li>Hiệu năng: Chip A17 Pro chuyên game.</li>
-                  <li>Khu vực: Hà Nội (Sẵn hàng).</li>
-                </ul>
-              </div>
-            </div>
+
+          <div class="footer-links d-flex gap-x-4">
+            <h3 class="d-flex align-items-center">Chính Sách</h3>
+            <ul class="list-style-type-none p-0 mg-left-0">
+              <li class="mg-bottom-10">
+                <a
+                  href="#"
+                  class="text-decoration-none text-color-white d-flex align-items-center gap-x-2 policy-link"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    />
+                  </svg>
+                  Chính sách bảo hành
+                </a>
+              </li>
+              <li class="mg-bottom-10">
+                <a
+                  href="#"
+                  class="text-decoration-none text-color-white d-flex align-items-center gap-x-2 policy-link"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                    />
+                  </svg>
+                  Chính sách đổi trả
+                </a>
+              </li>
+              <li class="mg-bottom-10">
+                <a
+                  href="#"
+                  class="text-decoration-none text-color-white d-flex align-items-center gap-x-2 policy-link"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+                    />
+                  </svg>
+                  Giao hàng & Thanh toán
+                </a>
+              </li>
+            </ul>
           </div>
-          <div class="col-3 content">
-            <img
-              src="./assets/img/iphone-17-pro-finish-select-2025-4_1759207422.jpg"
-              alt=""
-            />
-            <div class="product-card">
-              <div class="product-badge">Bán chạy</div>
-              <h3 class="product-name">iPhone 15 Pro 128GB</h3>
-              <div class="product-price">
-                <span class="current-price">24.890.000đ</span>
-                <span class="voucher-tag">Tặng sạc 20W</span>
-              </div>
-              <div class="product-info">
-                <ul>
-                  <li>Thiết kế: Màu Titan Tự Nhiên sang trọng.</li>
-                  <li>Hiệu năng: Chip A17 Pro, Camera Zoom 3x.</li>
-                  <li>Khu vực: TP.HCM (Sẵn hàng).</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-3 content">
-            <img
-              src="./assets/img/iphone-17-pro-finish-select-2025_1759207281.jpg"
-              alt=""
-            />
-            <div class="product-card">
-              <div class="product-badge">Mẫu Mới</div>
-              <h3 class="product-name">iPhone 16 Concept Ultra</h3>
-              <div class="product-price">
-                <span class="current-price">Liên hệ giá</span>
-                <span class="voucher-tag">Đặt trước</span>
-              </div>
-              <div class="product-info">
-                <ul>
-                  <li>Thiết kế: Cụm camera độc lạ, màu Cam rực rỡ.</li>
-                  <li>Hiệu năng: Dự kiến Chip A18 thế hệ mới.</li>
-                  <li>Khu vực: Hàng đặt trước.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-3 content">
-            <img
-              src="./assets/img/iphone-17-storage-select-202509-1_1759206838.jpg"
-              alt=""
-            />
-            <div class="product-card">
-              <div class="product-badge">Độc quyền</div>
-              <h3 class="product-name">iPhone Edition White Silver</h3>
-              <div class="product-price">
-                <span class="current-price">21.500.000đ</span>
-                <span class="voucher-tag">Bản giới hạn</span>
-              </div>
-              <div class="product-info">
-                <ul>
-                  <li>Thiết kế: Lưng kính mờ, viền bạc bóng bẩy.</li>
-                  <li>Hiệu năng: Tối ưu cho quay phim 4K.</li>
-                  <li>Khu vực: Bắc Ninh (Sẵn hàng).</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-3 content">
-            <img
-              src="./assets/img/iphone-air-storage-select-202509-1_1759206991.jpg"
-              alt=""
-            />
-            <div class="product-card">
-              <div class="product-badge">Giảm 12%</div>
-              <h3 class="product-name">iPhone 15 Plus 128GB</h3>
-              <div class="product-price">
-                <span class="current-price">21.990.000đ</span>
-                <span class="voucher-tag">Pin siêu trâu</span>
-              </div>
-              <div class="product-info">
-                <ul>
-                  <li>Thiết kế: Màn hình lớn 6.7 inch cực nét.</li>
-                  <li>Hiệu năng: Chip A16 Bionic, cổng USB-C.</li>
-                  <li>Khu vực: Toàn quốc (Sẵn hàng).</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="col-3 content">
-            <img src="./assets/img/tim_1662964379.jpg" alt="" />
-            <div class="product-card">
-              <div class="product-badge">Giá tốt</div>
-              <h3 class="product-name">Apple iPhone 14 128GB</h3>
-              <div class="product-price">
-                <span class="current-price">16.290.000đ</span>
-                <span class="voucher-tag">Trả góp 0%</span>
-              </div>
-              <div class="product-info">
-                <ul>
-                  <li>Thiết kế: Màu Tím Pastel, gọn nhẹ 6.1 inch.</li>
-                  <li>Hiệu năng: Chip A15 Bionic (5 nhân GPU).</li>
-                  <li>Khu vực: Đà Nẵng (Sẵn hàng).</li>
-                </ul>
-              </div>
+
+          <div class="footer-social d-flex gap-x-4">
+            <h3 class="d-flex align-items-center">Kết nối</h3>
+            <div
+              id="lienhe"
+              class="social-icons d-flex gap-x-4 align-items-center"
+            >
+              <a href="#" class="social-link facebook">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+
+              <a href="#" class="social-link instagram">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c.796 0 1.441-.645 1.441-1.44s-.645-1.44-1.441-1.44c-.795 0-1.439.645-1.439 1.44s.644 1.44 1.439 1.44z"
+                  />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
-      </main>
+        <div
+          class="text-center mg-top-20 border-top p-2 d-flex justify-content-center align-items-center"
+        >
+          <small class="mg-bottom-20"
+            >&copy; 2024 Your Store Name. All rights reserved.</small
+          >
+        </div>
+      </footer>
     </div>
+
+    <!-- MODAL CHI TIẾT SẢN PHẨM -->
+    <div id="productModal" class="modal">
+      <div class="modal-content product-detail-content">
+        <span class="close-btn" onclick="closeModal('productModal')"
+          >&times;</span
+        >
+        <div class="d-flex wrap-mobile gap-x-4">
+          <div class="product-img-large">
+            <img id="modalImg" src="" alt="Product Image" />
+          </div>
+          <div class="product-info-detail">
+            <h2 id="modalTitle">Tên sản phẩm</h2>
+            <p class="price-large" id="modalPrice">0đ</p>
+            <div class="badges" id="modalBadges"></div>
+            <p class="desc" id="modalDesc">Mô tả chi tiết sản phẩm...</p>
+
+            <div class="actions mg-top-20">
+              <button
+                class="btn bg-gradient-orange btn-large"
+                onclick="addToCartFromModal()"
+              >
+                Thêm vào giỏ hàng 🛒
+              </button>
+            </div>
+
+            <div class="specs mg-top-20">
+              <h4>Thông số kỹ thuật:</h4>
+              <ul id="modalSpecs"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL GIỎ HÀNG -->
+    <div id="cartModal" class="modal">
+      <div class="modal-content cart-content">
+        <span class="close-btn" onclick="closeModal('cartModal')">&times;</span>
+        <h2>Giỏ Hàng Của Bạn 🛍️</h2>
+        <div class="cart-items-container" id="cartItemsContainer">
+          <!-- Items sẽ được render bằng JS -->
+          <p class="empty-cart">Giỏ hàng đang trống</p>
+        </div>
+        <div class="cart-footer">
+          <div class="d-flex justify-content-between align-items-center">
+            <h3>Tổng tiền:</h3>
+            <h3 class="total-price" id="cartTotal">0đ</h3>
+          </div>
+          <button
+            class="btn bg-green btn-block mg-top-20"
+            onclick="openPayment()"
+          >
+            Thanh Toán Ngay
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL THANH TOÁN QR -->
+    <div id="paymentModal" class="modal">
+      <div class="modal-content payment-content">
+        <span class="close-btn" onclick="closeModal('paymentModal')"
+          >&times;</span
+        >
+        <h2 class="text-center">Thanh Toán Đơn Hàng</h2>
+
+        <!-- Bước 1: Thông tin giao hàng -->
+        <div id="paymentForm" class="payment-step">
+          <h3>1. Thông tin giao hàng 🚚</h3>
+          <div class="form-group mg-top-20">
+            <input
+              type="text"
+              id="cusName"
+              placeholder="Họ và tên người nhận"
+              class="form-control mg-bottom-10"
+            />
+            <input
+              type="text"
+              id="cusPhone"
+              placeholder="Số điện thoại liên hệ"
+              class="form-control mg-bottom-10"
+            />
+            <input
+              type="text"
+              id="cusAddress"
+              placeholder="Địa chỉ nhận hàng chi tiết"
+              class="form-control mg-bottom-20"
+            />
+            <button class="btn bg-gradient-orange btn-block" onclick="showQR()">
+              Tiếp tục thanh toán
+            </button>
+          </div>
+        </div>
+
+        <!-- Bước 2: Quét mã QR -->
+        <div
+          id="paymentQR"
+          class="payment-step text-center"
+          style="display: none"
+        >
+          <h3>2. Quét mã QR để thanh toán 💳</h3>
+          <p>Vui lòng quét mã bên dưới để hoàn tất đơn hàng</p>
+          <div class="qr-placeholder mg-top-20 mg-bottom-20">
+            <img
+              id="qrImage"
+              src="https://img.vietqr.io/image/MB-0000000000-compact.jpg"
+              alt="QR Code"
+              style="max-width: 250px"
+            />
+          </div>
+          <p class="total-payment-text">
+            Số tiền: <span id="paymentTotal">0đ</span>
+          </p>
+          <div class="d-flex gap-x-4 justify-content-center mg-top-20">
+            <button class="btn bg-darkgray" onclick="backToForm()">
+              Quay lại
+            </button>
+            <button class="btn bg-green" onclick="finishPayment()">
+              Đã chuyển khoản
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL ĐĂNG NHẬP -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content" style="max-width: 400px">
+        <span class="close-btn" onclick="closeModal('loginModal')"
+          >&times;</span
+        >
+        <h2 class="text-center">Đăng Nhập</h2>
+        <div class="form-group mg-top-20">
+          <div class="mg-bottom-10">
+            <label for="username" class="d-none">Tên đăng nhập</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Tên đăng nhập"
+              class="form-control"
+            />
+          </div>
+          <div class="mg-bottom-20">
+            <label for="password" class="d-none">Mật khẩu</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Mật khẩu"
+              class="form-control"
+            />
+          </div>
+          <button class="btn bg-green btn-block" onclick="login()">
+            Đăng Nhập
+          </button>
+          <p class="text-center mg-top-20">
+            Chưa có tài khoản?
+            <a href="#" style="color: #e926a8">Đăng ký ngay</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOAST CONTAINER -->
+    <div id="toast-container"></div>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   <script src="./assets/Javascript.js"></script>
 </html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - TechStore</title>
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <div
+      class="d-flex justify-content-between align-items-center container mg-top-30 Logo-nav header-nav"
+    >
+      <div class="logo-web">
+        <a href="index.html" class="text-decoration-none">
+          <h2 style="color: #333">🔧 TechStore Admin</h2>
+        </a>
+      </div>
+      <div class="d-flex gap-x-4">
+        <a
+          href="index.html"
+          class="btn bg-darkgray text-decoration-none text-color-white d-flex align-items-center"
+          >⬅️ Về Trang Chủ</a
+        >
+        <button id="resetDataBtn" class="btn bg-red">🔄 Reset Dữ Liệu</button>
+        <button id="addProductBtn" class="btn bg-green">+ Thêm Sản Phẩm</button>
+      </div>
+    </div>
+
+    <main class="container mg-top-30">
+      <div class="about-section mg-bottom-20">
+        <h2 class="mg-bottom-20">Thống kê danh mục</h2>
+        <div
+          style="
+            position: relative;
+            height: 300px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          "
+        >
+          <canvas id="productChart"></canvas>
+        </div>
+      </div>
+
+      <div class="about-section">
+        <h2 class="mg-bottom-20">Danh sách sản phẩm</h2>
+        <div style="overflow-x: auto">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Hình ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Danh mục</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody id="adminTableBody">
+              <!-- Dữ liệu sẽ được render bằng JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <!-- MODAL THÊM/SỬA SẢN PHẨM -->
+    <div id="adminModal" class="modal">
+      <div class="modal-content" style="max-width: 600px">
+        <span class="close-btn" onclick="closeModal('adminModal')"
+          >&times;</span
+        >
+        <h2 id="adminModalTitle" class="text-center mg-bottom-20">
+          Thêm Sản Phẩm
+        </h2>
+
+        <form id="productForm">
+          <input type="hidden" id="prodId" />
+
+          <div class="form-group mg-bottom-10">
+            <label>Tên sản phẩm (*)</label>
+            <input type="text" id="prodName" class="form-control" required />
+          </div>
+
+          <div class="d-flex gap-x-4 mg-bottom-10">
+            <div style="flex: 1">
+              <label>Giá (*)</label>
+              <input
+                type="number"
+                id="prodPrice"
+                class="form-control"
+                required
+              />
+            </div>
+            <div style="flex: 1">
+              <label>Danh mục (*)</label>
+              <select id="prodCategory" class="form-control">
+                <option value="iphone">Điện thoại</option>
+                <option value="laptop">Laptop</option>
+                <option value="audio">Âm thanh</option>
+                <option value="accessory">Phụ kiện</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group mg-bottom-10">
+            <label>Link hình ảnh (*)</label>
+            <input
+              type="text"
+              id="prodImg"
+              class="form-control"
+              placeholder="./assets/img/..."
+              required
+            />
+          </div>
+
+          <div class="d-flex gap-x-4 mg-bottom-10">
+            <div style="flex: 1">
+              <label>Badge (VD: Giảm 15%)</label>
+              <input type="text" id="prodBadge" class="form-control" />
+            </div>
+            <div style="flex: 1">
+              <label>Voucher (VD: Tặng sạc)</label>
+              <input type="text" id="prodVoucher" class="form-control" />
+            </div>
+          </div>
+
+          <div class="form-group mg-bottom-20">
+            <label>Thông số kỹ thuật (Mỗi dòng 1 ý)</label>
+            <textarea
+              id="prodSpecs"
+              class="form-control"
+              rows="4"
+              placeholder="- Chip A15&#10;- Ram 8GB"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn bg-green btn-block">
+            Lưu Sản Phẩm
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- TOAST CONTAINER -->
+    <div id="toast-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./Javascript.js"></script>
+  </body>
+</html>

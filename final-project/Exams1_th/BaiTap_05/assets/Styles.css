@@ -111,13 +111,6 @@ th {
   width: 300px;
 }
 
-.newEmployee {
-  width: 70%;
-  position: absolute;
-  top: 20vh;
-  left: 15vw;
-}
-
 .newEmployee > div:first-child {
   background-color: blue;
   color: white;
@@ -169,21 +162,18 @@ th {
   background-color: darkgray;
 }
 .newEmployee {
-  width: 70%;
   position: absolute;
   top: 20vh;
   left: 15vw;
+  width: 70%;
   background-color: white; /* Thêm nền trắng để không bị nhìn xuyên thấu */
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Thêm bóng đổ cho đẹp */
   z-index: 1000; /* Đảm bảo Form luôn nằm trên cùng */
   display: none; /* MẶC ĐỊNH LÀ ẨN */
+  border-radius: 10px;
 }
 
 /* Thêm một class phụ để hiện Form */
 .show-form {
   display: block !important;
-}
-
-.newEmployee {
-  border-radius: 10px;
 }

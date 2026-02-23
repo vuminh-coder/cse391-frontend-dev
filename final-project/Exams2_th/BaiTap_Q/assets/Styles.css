@@ -1,0 +1,39 @@
+.d-flex {
+  display: flex;
+}
+.listImg img {
+  border: 2px solid transparent;
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  transition: all 0.3 ease-in-out;
+  cursor: pointer;
+}
+.p-10 {
+  padding: 10px;
+}
+.p-20 {
+  padding: 20px;
+}
+.gap-x-2 {
+  column-gap: 10px;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.flex-direction-column {
+  flex-direction: column;
+}
+.img_FullSize img {
+  width: 630px;
+  height: 500px;
+}
+.border-radius-15 {
+  border-radius: 15px;
+}
+.listImg img.active {
+  border: 2px solid red;
+}
