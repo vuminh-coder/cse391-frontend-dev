@@ -1,0 +1,61 @@
+.border-none {
+  border: none;
+}
+.outline-none {
+  outline: none;
+}
+.bg-white {
+  background-color: white;
+}
+.bg-black {
+  background-color: black;
+}
+.text-decoration-none {
+  text-decoration: none;
+}
+.list-style-none {
+  list-style-type: none;
+}
+.cl-white {
+  color: white;
+}
+.cl-black {
+  color: black;
+}
+.container {
+  width: 1440px;
+}
+input,
+button {
+  border-radius: 10px;
+  height: 40px;
+  border: 2px solid black;
+  background-color: white;
+}
+
+th {
+  text-align: center;
+}
+#name.is-invalid,
+#score.is-invalid {
+  border: 2px solid red;
+}
+.bg-yellow td {
+  background-color: yellow;
+  color: rgb(0, 0, 0);
+}
+.text-black {
+  color: black;
+}
+body {
+  background-color: #f8f9fa;
+  padding-top: 50px;
+}
+.registration-form {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}

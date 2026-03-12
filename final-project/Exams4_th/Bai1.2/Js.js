@@ -2,109 +2,91 @@ const form = document.querySelector("#form");
 const username = document.querySelector("#name");
 const userScore = document.querySelector("#score");
 const table_tbody = document.querySelector("tbody");
-
-const dataList = JSON.parse(localStorage.getItem("dataList")) || [];
-
-function scoreXh(diem) {
-  if (diem >= 8.5) return "Giỏi";
-  else if (diem >= 7 && diem < 8.5) return "Khá";
-  else if (diem >= 5 && diem < 7) return "Trung Bình";
-  else return "Yếu";
-}
-
-function renderTable() {
-  table_tbody.innerHTML = "";
-
-  let Sum = 0;
-  dataList.forEach((item, index) => {
-    Sum += parseInt(item.score);
-
-    const row = `
-            <tr class="${item.score < 5 ? "bg-yellow text-white" : ""}">
-                <td class="text-center">${index + 1}</td>
-                <td class="text-center">${item.name}</td>
-                <td class="text-center">${item.score}</td>
-                <td class="text-center">${scoreXh(item.score)}</td>
-                
-                <td class="text-center">
-                    <button class="btn btn-danger btn-sm" onclick="deleteItem(${index})">Xóa</button>
-                </td>
-            </tr>`;
-
-    table_tbody.insertAdjacentHTML("beforeend", row);
-  });
-  const rowTb = `
-     <tr>
-              <td colspan="3" class="text-bold text-center">Tổng số sinh viên</td>
-              <td colspan="2" class="text-bold text-center">Điểm Trung Bình</td>
-      </tr>
-      <tr>
-              <td colspan="3" class="text-bold text-center">${dataList.length}</td>
-              <td colspan="2" class="text-bold text-center">${Sum / dataList.length}</td>
-      </tr>
-  `;
-  table_tbody.insertAdjacentHTML("beforeend", rowTb);
-}
-
-renderTable();
+const select = document.querySelector("#select");
+const formFindName = document.querySelector("#formFindName");
+const inputFindName = document.querySelector("#findName");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  let isValid = true;
-
   const name = username.value.trim();
-  const score = userScore.value.trim();
+  const score = parseFloat(userScore.value);
 
-  if (name === "") {
-    username.classList.add("is-invalid");
-    isValid = false;
-  } else {
-    username.classList.remove("is-invalid");
-  }
-
-  if (score === "" || score < 0 || score > 10) {
-    userScore.classList.add("is-invalid");
-    isValid = false;
-  } else {
-    userScore.classList.remove("is-invalid");
-  }
-
-  if (!isValid) {
-    alert("Vui lòng kiểm tra lại thông tin nhập vào!");
+  if (!name || isNaN(score) || score < 0 || score > 10) {
+    alert("Vui lòng nhập đầy đủ thông tin! & Điểm phải từ 0 đến 10");
     return;
   }
 
-  console.log("Dữ liệu hợp lệ, tiến hành lưu...");
+  const count = table_tbody.children.length + 1;
+  const classification = xepHangHocLuc(score);
 
-  const newData = { name, score };
-  dataList.push(newData);
+  const rowClass = score < 5 ? "bg-yellow text-dark" : "";
 
-  localStorage.setItem("dataList", JSON.stringify(dataList));
-
-  renderTable();
+  table_tbody.innerHTML += `
+    <tr class="${rowClass}">
+      <td class="text-center stt">${count}</td>
+      <td class="text-center student-name">${name}</td>
+      <td class="text-center">${score}</td>
+      <td class="text-center classification">${classification}</td>
+      <td class="text-center">
+        <button class="btn btn-danger btn-sm btn-delete">Delete</button>
+      </td>
+    </tr>
+  `;
 
   form.reset();
   username.focus();
 });
 
-function deleteItem(index) {
-  if (confirm("Xóa dòng này nhé?")) {
-    dataList.splice(index, 1);
-    localStorage.setItem("dataList", JSON.stringify(dataList)); // Cập nhật storage
-    renderTable();
+table_tbody.addEventListener("click", function (e) {
+  if (e.target.classList.contains("btn-delete")) {
+    e.target.closest("tr").remove();
+    updateStudentOrder();
   }
+});
+
+function updateStudentOrder() {
+  const rows = table_tbody.querySelectorAll("tr");
+  rows.forEach((row, index) => {
+    row.querySelector(".stt").innerText = index + 1;
+  });
 }
 
-const formName = document.querySelector(".form-find-name");
-const inputName = document.querySelector(".findName");
+function xepHangHocLuc(score) {
+  if (score >= 8.5) return "Giỏi";
+  if (score >= 7.0) return "Khá";
+  if (score >= 5.0) return "Trung bình";
+  return "Yếu";
+}
 
-formName.addEventListener("submit", (item) => {
-  item.preventDefault();
-  const filterName = dataList.filter((event, index) => {
-    const findName = inputName.value.trim().toLowerCase();
-    const name = event.name.trim().toLowerCase();
-    return name.includes(findName);
+formFindName.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const keyword = inputFindName.value.trim().toLowerCase();
+  const rows = table_tbody.querySelectorAll("tr");
+
+  rows.forEach((row) => {
+    const studentName = row
+      .querySelector(".student-name")
+      .innerText.toLowerCase();
+    row.style.display = studentName.includes(keyword) ? "" : "none";
   });
-  renderTable();
+});
+
+select.addEventListener("change", () => {
+  const selectValue = select.value; // all, kha, gioi, etc.
+  const selectedText = select.options[select.selectedIndex].text.toLowerCase();
+
+  const currentRows = table_tbody.querySelectorAll("tr");
+
+  currentRows.forEach((row) => {
+    const rowClassText = row
+      .querySelector(".classification")
+      .innerText.toLowerCase();
+
+    if (selectValue === "all" || rowClassText === selectedText) {
+      row.style.display = "";
+    } else {
+      row.style.display = "none";
+    }
+  });
 });

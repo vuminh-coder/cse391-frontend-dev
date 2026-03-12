@@ -1,0 +1,144 @@
+:root {
+  --color-primary: #00adb0;
+  --color-primary-300: #00c2c5;
+}
+/* RESET CSS */
+body {
+  margin: 0;
+}
+*:not(i) {
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+table,
+th,
+td,
+tr {
+  border: 1px solid #222;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.bg-gray-400 {
+  background-color: rgb(196, 196, 196);
+}
+.bg-white {
+  background-color: white;
+}
+.bg-primary {
+  background-color: var(--color-primary, "#00adb0");
+}
+.bg-primary-300 {
+  background-color: var(--color-primary-300, "#00adb0");
+}
+
+.text-primary {
+  color: var(--color-primary, "#00adb0");
+}
+.text-white {
+  color: white;
+}
+.text-center {
+  text-align: center;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+.font-semibold {
+  font-weight: 500;
+}
+.my-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.mb-3 {
+  margin-bottom: 12px;
+}
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.py-0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.py-3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.py-2 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.px-2 {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.text-sm {
+  font-size: 13px;
+}
+.rounded-sm {
+  border-radius: 4px;
+}
+.rounded {
+  border-radius: 6px;
+}
+.rounded-lg {
+  border-radius: 8px;
+}
+.rounded-xl {
+  border-radius: 10px;
+}
+.list-style-type-none {
+  list-style-type: none;
+}
+.text-decoration-none {
+  text-decoration: none;
+}
+/* POSITION */
+.static {
+  position: static;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.sticky {
+  position: sticky;
+}
+.border-none {
+  border: none;
+}
+.outline-none {
+  outline: none;
+}
+.left-0 {
+  left: 0;
+}
+.right-0 {
+  right: 0;
+}
+.mg-left-0 {
+  margin-left: 0;
+}
+.mg-right-0 {
+  margin-right: 0;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.p-0 {
+  padding: 0;
+}
