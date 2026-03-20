@@ -1,0 +1,22 @@
+.img {
+  position: absolute;
+}
+
+.img {
+  width: 100%;
+  border-radius: 10px;
+}
+.img img {
+  width: calc(100% - 15px);
+  border-radius: 10px;
+}
+header,
+main {
+  z-index: 999;
+}
+.z-999 {
+  z-index: 999;
+}
+.p-10 {
+  padding: 10px;
+}

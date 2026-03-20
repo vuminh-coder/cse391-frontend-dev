@@ -1,0 +1,124 @@
+header,
+main #hero {
+  background-size: cover;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+main #hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p-20 {
+  padding: 20px;
+}
+
+#hero-content {
+  padding: 15px;
+  width: fit-content;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.471);
+  background-color: rgb(192, 192, 192);
+}
+#hero-content a {
+  color: yellow;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+#hero-content p {
+  color: rgb(160, 160, 160);
+}
+
+header,
+header ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+ul,
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+header ul a {
+  color: yellow;
+}
+#page-logo {
+  font-family: "Oleo Script", system-ui;
+  font-weight: 700;
+  font-size: 24px;
+  align-items: center;
+  display: flex;
+}
+
+#page-logo a {
+  color: rgb(192, 222, 43);
+}
+#destinations {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#destinations img {
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.destination {
+  text-align: center;
+  flex: 1 1 calc(100vw / 3 - 60px);
+}
+#destinations img:hover {
+  transform: scale(1.02);
+}
+footer > ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer img {
+  width: 70px;
+  height: 50px;
+}
+
+footer {
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+}
+main {
+  color: white;
+  border-radius: 10px;
+}
+
+footer img {
+  transition: all 0.5s ease;
+}
+footer img:hover {
+  transform: translateY(-10px);
+}
+.destination strong {
+  color: rgb(73, 73, 244);
+}
+#highlights h2 {
+  text-align: center;
+}
+#highlights {
+  border-radius: 10px;
+  background-color: lightblue;
+}
+.w-100vw {
+  width: 100vw;
+}

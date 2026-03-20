@@ -1,0 +1,69 @@
+/* Header sticky */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white; /* Thêm màu nền để khi cuộn không bị đè chữ lên nhau */
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Hoàn thành TODO: Thêm box-shadow để tạo hiệu ứng nổi */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Nút Scroll to Top */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  /* Hoàn thành TODO */
+  width: 50px;
+  height: 50px;
+  background: #007bff;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-size: 24px;
+
+  /* Bổ sung thêm transition để hiệu ứng hover mượt hơn */
+  transition: all 0.3s ease;
+  z-index: 99; /* Đảm bảo nút luôn nằm trên các nội dung khác */
+}
+
+.scroll-top:hover {
+  /* Hoàn thành TODO */
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Navigation mặc định (Desktop) */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Responsive cho Mobile */
+@media (max-width: 768px) {
+  .sticky-header {
+    flex-direction: column; /* Chuyển header thành cột trên mobile nếu cần */
+    align-items: flex-start;
+  }
+
+  nav {
+    /* Hoàn thành TODO: Chuyển menu thành hàng dọc */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    gap: 10px;
+  }
+}
