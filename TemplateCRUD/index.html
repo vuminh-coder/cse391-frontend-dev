@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD với LocalStorage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <body>
+    <div class="container">
+      <h2>Quản lý thông tin User</h2>
+
+      <form id="crudForm">
+        <input type="hidden" id="editIndex" />
+
+        <div class="form-group">
+          <label for="user-name">Họ và Tên:</label>
+          <input
+            type="text"
+            id="user-name"
+            placeholder="Input name..."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="user-email">Email:</label>
+          <input
+            type="email"
+            id="user-email"
+            placeholder="Input email..."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="user-class">User Class:</label>
+          <input
+            type="text"
+            id="user-class"
+            placeholder="Input class..."
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="user-score">User Score:</label>
+          <input
+            type="number"
+            id="user-score"
+            placeholder="Input score..."
+            required
+          />
+        </div>
+
+        <button type="submit" id="submitBtn">Thêm Mới</button>
+        <button
+          type="button"
+          id="cancelBtn"
+          style="display: none"
+          onclick="resetForm()"
+        >
+          Hủy
+        </button>
+      </form>
+
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Class</th>
+            <th>Score</th>
+
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <script src="./assets/js/js.js"></script>
+  </body>
+</html>
