@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/index.css" />
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="container">
+        <form
+          action=""
+          class="d-flex justify-content-between text-bg-light p-2"
+          id="searchForm"
+        >
+          <div class="d-flex align-items-center column-gap-3">
+            <h1>Quản Lý Nhân Sự</h1>
+            <a href="" class="text-decoration-none text-dark">Trang Chủ</a
+            ><a href="" class="text-decoration-none text-dark">Liên Hệ</a>
+          </div>
+
+          <div class="d-flex align-items-center column-gap-3">
+            <input
+              type="text"
+              placeholder="Tìm kiếm ...."
+              class="input border-2 text-dark border-dark radius-2 p-1"
+              id="searchInput"
+            /><button
+              type="submit"
+              class="btn border-success border-2 text-success text-align-left p-1"
+            >
+              Tìm
+            </button>
+          </div>
+        </form>
+
+        <div id="table" class="mt-4 px-xxl-5">
+          <header class="d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+              <h3>Danh Sách Nhân Sự</h3>
+            </div>
+
+            <div class="d-flex column-gap-3">
+              <button class="btn btn-success" id="btnNewEmployee">
+                + Thêm Mới
+              </button>
+            </div>
+          </header>
+
+          <table class="w-100 mt-5">
+            <thead>
+              <tr class="py-3">
+                <th>STT</th>
+                <th>Họ Tên</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Vị trí</th>
+                <th>Hành Động</th>
+              </tr>
+            </thead>
+
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <form action="" id="userForm" class="d-none">
+      <div
+        class="d-flex justify-content-between align-items-center border-bottom border-2 mb-3"
+      >
+        <h2>Thêm Nhân Sự Mới</h2>
+        <button id="btnCloseIcon" type="button" class="text-bg-white border-0">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#6c757d"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            style="cursor: pointer"
+            title="Đóng"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="w-100 row">
+        <div class="col-6 row-gap-2">
+          <div class="d-flex flex-column">
+            <label for="userName">Họ tên :</label
+            ><input
+              type="text"
+              id="userName"
+              class="input border-2 text-dark border-dark radius-2 p-1"
+            />
+          </div>
+          <div class="d-flex flex-column">
+            <label for="userPhone">Số điện thoại</label
+            ><input
+              type="text"
+              id="userPhone"
+              class="input border-2 text-dark border-dark radius-2 p-1 mt-2"
+            />
+          </div>
+          <div class="d-flex flex-column mt-3">
+            <div for="userGender">Giới tính</div>
+            <div class="d-flex column-gap-2">
+              <div>
+                <input type="radio" name="" id="userMale" />
+                <label for="userMale">Nam</label>
+              </div>
+              <div>
+                <input type="radio" name="" id="userFemale" />
+                <label for="userFemale">Nữ</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 row-gap-2">
+          <div class="d-flex flex-column">
+            <label for="userEmail">Email</label
+            ><input
+              type="email"
+              id="userEmail"
+              class="input border-2 text-dark border-dark radius-2 p-1"
+            />
+          </div>
+          <div class="d-flex flex-column">
+            <label for="position-select" class="mb-2"
+              >Chọn vị trí công việc:</label
+            >
+            <select
+              name="position"
+              id="position-select"
+              class="form-select border-2 text-dark border-dark radius-2 p-1"
+            >
+              <option value="" selected disabled>-- Chọn vị trí --</option>
+              <option value="fullstack-developer">Fullstack Developer</option>
+              <option value="frontend-developer">Frontend Developer</option>
+              <option value="backend-developer">Backend Developer</option>
+              <option value="uiux-designer">UI/UX Designer</option>
+              <option value="project-manager">Project Manager</option>
+              <option value="data-scientist">Data Scientist</option>
+              <option value="devops-engineer">DevOps Engineer</option>
+              <option value="quality-assurance">Quality Assurance</option>
+              <option value="product-owner">Product Owner</option>
+              <option value="business-analyst">Business Analyst</option>
+              <option value="mobile-developer">Mobile Developer</option>
+              <option value="system-administrator">System Administrator</option>
+              <option value="security-specialist">Security Specialist</option>
+              <option value="cloud-architect">Cloud Architect</option>
+              <option value="marketing-lead">Marketing Lead</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-end mt-4 column-gap-2">
+        <button id="btnCancel" type="button" class="btn btn-danger">Cancel</button
+        ><button id="btnSave" type="submit" class="btn btn-success">
+          Save
+        </button>
+      </div>
+    </form>
+  </body>
+  <script src="./assets/data.js"></script>
+</html>
